@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+header .logo-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoimg {
+    width: 15vw;
+    max-width: 300px;
+    min-width: 150px;
+}
+
+#main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    margin-top: -30vh;
+    margin-bottom: 14vh;
+}
+
+.main-info-txt {
+    font-size: 4vw;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.extra-info {
+    font-size: 1vw;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.yellow {
+    color: #FECC09;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30vh;
+}
+
+.container {
+    background-color: #FECC09;
+    color: black;
+    width: 300px;
+    height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+.container h1 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    padding-top: 25px;
+    background-color: #FECC09;
+    color: black;
+}
+
+.container p {
+    margin: 0;
+    padding: 0;
+    background-color: #FECC09;
+    color: black;
+}
+
+
+.process-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.process-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container2 {
+    background-color: #FECC09;
+    color: black;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container2.offset {
+    margin-left: 30px;
+}
+
+.process-text {
+    max-width: 400px;
+    margin-left: 40px;
+
+}
+
+.process-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.process-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.container2 h1,
+.container2 p {
+    background-color: #FECC09;
+    color: black;
+}
+
+.yellow {
+    color: #FECC09;
+}
+
+.results-container {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.rh1 {
+    margin-top: 15vh;
+    font-size: 2rem;
+}
+
+.rp {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .process-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .process-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container2.offset {
+        margin-left: 0;
+    }
+
+    .main-info-txt {
+        font-size: 6vw;
+    }
+
+    .extra-info {
+        font-size: 3vw;
+    }
+
+
+}
+
+@media screen and (max-width: 550px) {
+    .container2 {
+        width: 100%;
+    }
+
+    .process-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .process-text p {
+        font-size: 0.9rem;
+    }
+}
+
+.calendars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #000;
+}
+
+.calendar {
+    flex: 1 1 40%;
+    /* Smaller width on larger screens */
+    max-width: 500px;
+    min-width: 280px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar iframe {
+    height: 600px;
+    /* Increased height */
+}
+
+@media screen and (max-width: 768px) {
+    .calendars-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendar {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .calendar iframe {
+        height: 400px;
+    }
+}
+
+.calendars-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.2rem;
+    /* Adjust for larger screens */
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .calendars-intro {
+        font-size: 1rem;
+        /* Smaller font on smaller screens */
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .calendars-intro {
+        font-size: 0.9rem;
+        /* Further reduce for very small screens */
+    }
+}
+
+.sh1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: -20vh;
+}
+
+.calendars-intro strong {
+    margin: 30px;
+}
+
+.calendars-intro span {
+    display: block;
+    /* Ensures each checkmark and its text is on a new line */
+    margin-top: 2px;
+    /* Subtle differentiation between items */
+    line-height: 1.6;
+    /* Maintains readability */
+}
